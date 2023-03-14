@@ -1,7 +1,7 @@
-#!/bin/bash
+
 python train.py \
      --opt sgd \
-     --lr 5e-2 \
+     --lr 1e-1 \
      --gamma 1e-1 \
      --epoch 60 \
      --decay_epoch 30 \

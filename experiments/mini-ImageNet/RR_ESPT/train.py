@@ -30,8 +30,7 @@ model = ESPT(
     resnet=args.resnet, seed=args.seed
 )
 
-pretrained_model_path = '../../ResNet-12_pretrain/ESPT_1/model_ResNet-12-seed2-alpha1.0-weight0.0-lr0.1-way5-decay_epoch[200, 300]_best.pth'
-# pretrained_model_path = '../../ResNet-12_pretrain/FRN/model_ResNet-12.pth'
+pretrained_model_path = '../../ResNet-12_pretrain/ESPT/model_ResNet-12.pth'
 model.load_state_dict(torch.load(pretrained_model_path, map_location=util.get_device_map(args.gpu)), strict=False)
 
 epoch_trainer = partial(meta_train.meta_train_ESPT, train_loader=train_loader)

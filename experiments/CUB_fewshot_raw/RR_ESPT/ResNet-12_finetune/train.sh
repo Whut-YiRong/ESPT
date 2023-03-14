@@ -1,0 +1,144 @@
+
+python train.py \
+    --opt sgd \
+    --lr 5e-2 \
+    --gamma 1e-1 \
+    --epoch 800 \
+    --epoch_size 100 \
+    --decay_epoch 500 650 800 \
+    --val_epoch 10 \
+    --weight_decay 5e-4 \
+    --nesterov \
+    --pre \
+    --resnet \
+    --train_way 5 \
+    --train_support_shot 5 \
+    --train_query_shot 15 \
+    --train_transform_type 0 \
+    --test_way 5 \
+    --test_support_shot 1 5 \
+    --test_query_shot 16 \
+    --alpha 20.0 \
+    --weight 0.0 \
+    --seed 1 \
+    --gpu 0
+
+python train.py \
+    --opt sgd \
+    --lr 5e-2 \
+    --gamma 1e-1 \
+    --epoch 800 \
+    --epoch_size 100 \
+    --decay_epoch 500 650 800 \
+    --val_epoch 10 \
+    --weight_decay 5e-4 \
+    --nesterov \
+    --pre \
+    --resnet \
+    --train_way 5 \
+    --train_support_shot 5 \
+    --train_query_shot 15 \
+    --train_transform_type 0 \
+    --test_way 5 \
+    --test_support_shot 1 5 \
+    --test_query_shot 16 \
+    --alpha 20.0 \
+    --weight 0.1 \
+    --seed 1 \
+    --gpu 0
+
+python train.py \
+    --opt sgd \
+    --lr 5e-2 \
+    --gamma 1e-1 \
+    --epoch 800 \
+    --epoch_size 100 \
+    --decay_epoch 500 650 800 \
+    --val_epoch 10 \
+    --weight_decay 5e-4 \
+    --nesterov \
+    --pre \
+    --resnet \
+    --train_way 5 \
+    --train_support_shot 5 \
+    --train_query_shot 15 \
+    --train_transform_type 0 \
+    --test_way 5 \
+    --test_support_shot 1 5 \
+    --test_query_shot 16 \
+    --alpha 20.0 \
+    --weight 0.2 \
+    --seed 1 \
+    --gpu 0
+
+python train.py \
+    --opt sgd \
+    --lr 5e-2 \
+    --gamma 1e-1 \
+    --epoch 800 \
+    --epoch_size 100 \
+    --decay_epoch 500 650 800 \
+    --val_epoch 10 \
+    --weight_decay 5e-4 \
+    --nesterov \
+    --pre \
+    --resnet \
+    --train_way 5 \
+    --train_support_shot 5 \
+    --train_query_shot 15 \
+    --train_transform_type 0 \
+    --test_way 5 \
+    --test_support_shot 1 5 \
+    --test_query_shot 16 \
+    --alpha 20.0 \
+    --weight 0.3 \
+    --seed 1 \
+    --gpu 0
+
+python train.py \
+    --opt sgd \
+    --lr 5e-2 \
+    --gamma 1e-1 \
+    --epoch 800 \
+    --epoch_size 100 \
+    --decay_epoch 500 650 800 \
+    --val_epoch 10 \
+    --weight_decay 5e-4 \
+    --nesterov \
+    --pre \
+    --resnet \
+    --train_way 5 \
+    --train_support_shot 5 \
+    --train_query_shot 15 \
+    --train_transform_type 0 \
+    --test_way 5 \
+    --test_support_shot 1 5 \
+    --test_query_shot 16 \
+    --alpha 20.0 \
+    --weight 0.4 \
+    --seed 1 \
+    --gpu 0
+
+python train.py \
+    --opt sgd \
+    --lr 5e-2 \
+    --gamma 1e-1 \
+    --epoch 800 \
+    --epoch_size 100 \
+    --decay_epoch 500 650 800 \
+    --val_epoch 10 \
+    --weight_decay 5e-4 \
+    --nesterov \
+    --pre \
+    --resnet \
+    --train_way 5 \
+    --train_support_shot 5 \
+    --train_query_shot 15 \
+    --train_transform_type 0 \
+    --test_way 5 \
+    --test_support_shot 1 5 \
+    --test_query_shot 16 \
+    --alpha 20.0 \
+    --weight 0.5 \
+    --seed 1 \
+    --gpu 0

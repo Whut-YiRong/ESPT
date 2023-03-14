@@ -30,8 +30,7 @@ model = ESPT(
     resnet=args.resnet, seed=args.seed
 )
 
-pretrained_model_path = '../../ResNet-12_pretrain/ESPT/model_ResNet-12-seed1-alpha1.0-weight0.0-lr0.1-way5-decay_epoch[30, 60]_best.pth'
-# pretrained_model_path = '../../ResNet-12_pretrain/FRN/model_ResNet-12-miniImageNet.pth'
+pretrained_model_path = '../../ResNet-12_pretrain/ESPT/model_ResNet-12.pth'
 model.load_state_dict(torch.load(pretrained_model_path, map_location=util.get_device_map(args.gpu)), strict=False)
 model.scale = torch.nn.Parameter(torch.FloatTensor([15.0]), requires_grad=True)
 
@@ -42,10 +41,10 @@ train_manager.train(model)
 train_manager.evaluate(model, seed=0)
 train_manager.evaluate(model, seed=1)
 train_manager.evaluate(model, seed=2)
-# train_manager.evaluate(model, seed=3)
-# train_manager.evaluate(model, seed=4)
-# train_manager.evaluate(model, seed=5)
-# train_manager.evaluate(model, seed=6)
-# train_manager.evaluate(model, seed=7)
-# train_manager.evaluate(model, seed=8)
-# train_manager.evaluate(model, seed=9)
+train_manager.evaluate(model, seed=3)
+train_manager.evaluate(model, seed=4)
+train_manager.evaluate(model, seed=5)
+train_manager.evaluate(model, seed=6)
+train_manager.evaluate(model, seed=7)
+train_manager.evaluate(model, seed=8)
+train_manager.evaluate(model, seed=9)

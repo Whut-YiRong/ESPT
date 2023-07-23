@@ -65,14 +65,37 @@ For general few-shot classification task on ImageNet variants, the feature extra
     ```
    A pre-trained model `model_*.pth` will be generated and saved.
 2. Episodic learning
+
    First, navigate to the `mini-ImageNet/RR_ESPT/ResNet-12_finetune` subfolder in `experiments/`:
     ```
     cd experiments/mini-ImageNet/RR_ESPT/ResNet-12_finetune
     ```
    Then, change the value of `pretrained_model_path` by overwriting the following code line (line 33) in `train.py`:
-```
-   pretrained_model_path = '../../ResNet-12_pretrain/ESPT/model_ResNet-12.pth'
-```
+    ```
+    pretrained_model_path = '../../ResNet-12_pretrain/ESPT/model_ResNet-12.pth'
+    ```
+   Finally, run `train.sh` to train (episodic training) and evaluate our ESPT method.
+    ```
+    sh train.sh
+    ```
+   Model evaluation is based on the codes `train_manager.evaluate(model, seed=*)` (lines 40-49) in `train.py`, you can also write a separate file for model testing only.  
 
+## Few-shot Classification Results
+Using this source code, you can obtain the following experimental results on general few-shot classification, fine-grained few-shot classification, and cross-domain few-shot classification tasks, respectively.
+<p align="center">
+<img src="./imgs/cub_cropped.png" width="450">
+</p>
+<p align="center">
+<img src="./imgs/cub_raw.png" width="450">
+</p>
+<p align="center">
+<img src="./imgs/imagenet.png" width="750">
+</p>
+<p align="center">
+<img src="./imgs/mini2cub.png" width="525">
+</p>
 
-
+## Contact
+We have tried our best to verify the correctness of our released source code. 
+But there still may be some undetected bugs or errors in the current release. 
+If you encounter any issues or have questions about using this code, please feel free to contact us via yrong@whut.edu.cn.

@@ -6,6 +6,10 @@ This repository contains the reference Pytorch source code for the following pap
 
 Yi Rong, Xiongbo Lu, Zhaoyang Sun, Yaxiong Chen, Shengwu Xiong 
 
+<p align="left">
+<img src="./images/Figure1.PNG" width="1000">
+</p>
+
 If you find our code or paper useful to your research work, please consider citing our work using the following bibtex:
 ```
 @InProceedings{Rong_ESPT_2023,
@@ -82,18 +86,18 @@ For general few-shot classification task on ImageNet variants, the feature extra
 
 ## Few-shot Classification Results
 Using this source code, you can obtain the following experimental results on general few-shot classification, fine-grained few-shot classification, and cross-domain few-shot classification tasks, respectively.
-<p align="center">
-<img src="./imgs/cub_cropped.png" width="450">
-</p>
-<p align="center">
-<img src="./imgs/cub_raw.png" width="450">
-</p>
-<p align="center">
-<img src="./imgs/imagenet.png" width="750">
-</p>
-<p align="center">
-<img src="./imgs/mini2cub.png" width="525">
-</p>
+1. General few-shot classification
+    <p align="left">
+    <img src="./images/ImageNet.PNG" width="900">
+    </p>
+2. Fine-grained few-shot classification
+    <p align="left">
+    <img src="./images/fine-grained.PNG" width="450">
+    </p>
+3. Cross-domain few-shot classification
+    <p align="left">
+    <img src="./images/cross-domain.PNG" width="450">
+    </p>
 
 ## Contact
 We have tried our best to verify the correctness of our released source code. 

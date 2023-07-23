@@ -57,8 +57,16 @@ To train a fine-grained classification model from scratch on the `CUB` dataset, 
 cd experiments/CUB_fewshot_raw/RR_ESPT/ResNet-12_finetune
 sh train.sh
 ```
-For general few-shot classification task on ImageNet variants, the feature extractor of our method is pre-trained before the episodic learning.
-
+For general few-shot classification task on ImageNet variants, the feature extractor (ResNet-12) of our ESPT method should be pre-trained before the episodic learning. Therefore for example, to train the ESPT model on `mini-ImageNet` dataset, you need to execute the following commands:
+1. Feature extractor pre-training
+    ```
+    cd experiments/mini-ImageNet/ResNet-12_pretrain/ESPT
+    sh train.sh
+    ```
+   A pre-trained model `model_*.pth` will be generated and saved.
+2. Episodic learning
+    First, navigate to the `mini-ImageNet/RR_ESPT` subfolder in `experiments/`:
+change the value of pretrained_model_path by overwriting the following code line (line 33):
 
 
 

@@ -65,8 +65,14 @@ For general few-shot classification task on ImageNet variants, the feature extra
     ```
    A pre-trained model `model_*.pth` will be generated and saved.
 2. Episodic learning
-    First, navigate to the `mini-ImageNet/RR_ESPT` subfolder in `experiments/`:
-change the value of pretrained_model_path by overwriting the following code line (line 33):
+   First, navigate to the `mini-ImageNet/RR_ESPT/ResNet-12_finetune` subfolder in `experiments/`:
+    ```
+    cd experiments/mini-ImageNet/RR_ESPT/ResNet-12_finetune
+    ```
+   Then, change the value of `pretrained_model_path` by overwriting the following code line (line 33) in `train.py`:
+```
+   pretrained_model_path = '../../ResNet-12_pretrain/ESPT/model_ResNet-12.pth'
+```
 
 
 

@@ -27,10 +27,20 @@ If you find our code or paper useful to your research work, please consider citi
 All the experiments are conducted on **Intel(R)Xeon(R) Gold 5117 @2.00GHz CPU**, **NVIDIA A100 Tensor Core GPU**, and **Ubuntu 18.04.6** LTS operation system.
 
 ## Data Preparing
-At first, you need to set the value of `data_path` in `config.yml`, it should be the **absolute path** of the folder that stores all the data.
+1. At first, you need to set the value of `data_path` in `config.yml`, it should be the **absolute path** of the folder that stores all the data.
 
-The following datasets are used in our paper: 
-- CUB_200_2011 \[[Dataset Page](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Download Link](https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view)\]
-- mini-ImageNet \[[Dataset Page](https://github.com/twitter/meta-learning-lstm), [Download Link](https://drive.google.com/file/d/0B3Irx3uQNoBMQ1FlNXJsZUdYWEE/view)\] 
-- tiered-ImageNet (derived from [DeepEMD](https://arxiv.org/abs/2003.06777)'s [implementation](https://github.com/icoz69/DeepEMD)) \[[Dataset Page](https://github.com/icoz69/DeepEMD), [Download Link](https://drive.google.com/file/d/1ANczVwnI1BDHIF65TgulaGALFnXBvRfs/view)\]
+2. The following datasets are used in our paper: 
+    - CUB_200_2011 \[[Dataset Page](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Download Link](https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view)\]
+    - mini-ImageNet \[[Dataset Page](https://github.com/twitter/meta-learning-lstm), [Download Link](https://drive.google.com/file/d/0B3Irx3uQNoBMQ1FlNXJsZUdYWEE/view)\] 
+    - tiered-ImageNet (derived from [DeepEMD](https://arxiv.org/abs/2003.06777)'s [implementation](https://github.com/icoz69/DeepEMD)) \[[Dataset Page](https://github.com/icoz69/DeepEMD), [Download Link](https://drive.google.com/file/d/1ANczVwnI1BDHIF65TgulaGALFnXBvRfs/view)\]
+    
+    You can download individual datasets using the download links provided above, and extract them into your `data_path` folder. 
+
+3. Then, you need to pre-process all the datasets one-by-one into their corresponding few-shot versions by using following commands:
+    ```
+    cd data
+    python init_CUB_fewshot.py
+    python init_mini-ImageNet.py
+    python init_tiered-ImageNet_DeepEMD.py
+    ```
 

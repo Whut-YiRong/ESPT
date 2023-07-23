@@ -2,7 +2,7 @@
 
 This repository contains the reference Pytorch source code for the following paper:
 
-[ESPT: A Self-Supervised Episodic Spatial Pretext Task for Improving Few-Shot Learning](https://arxiv.org/abs/2304.13287), which has been accepted by AAAI 2023
+[ESPT: A Self-Supervised Episodic Spatial Pretext Task for Improving Few-Shot Learning](https://arxiv.org/abs/2304.13287), which has been accepted by AAAI 2023 (Oral)
 
 Yi Rong, Xiongbo Lu, Zhaoyang Sun, Yaxiong Chen, Shengwu Xiong 
 
@@ -51,6 +51,13 @@ All the experiments are conducted on **Intel(R)Xeon(R) Gold 5117 @2.00GHz CPU**,
     Under each folder, images are organized into `train`, `val`, and `test` folders. In addition, you can also find folders named `val_pre` and `test_pre`, which contain validation and testing images pre-resized to the size of 84x84 for the sake of speed.
 
 ## Model Training and Testing
+
+To train a fine-grained classification model from scratch on the `CUB` dataset, simply navigate to the `CUB_fewshot_raw/RR_ESPT/ResNet-12_finetune` subfolder in `experiments/`. This folder contains 2 files: `train.py` and `train.sh`. Running the shell script `train.sh` will train and evaluate the model with hyperparameters matching our paper. Explanations for these hyperparameters can be found in `trainers/trainer.py`.
+```
+cd experiments/CUB_fewshot_raw/RR_ESPT/ResNet-12_finetune
+sh train.sh
+```
+For general few-shot classification task on ImageNet variants, the feature extractor of our method is pre-trained before the episodic learning.
 
 
 

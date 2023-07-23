@@ -36,11 +36,22 @@ All the experiments are conducted on **Intel(R)Xeon(R) Gold 5117 @2.00GHz CPU**,
     
     You can download individual datasets using the download links provided above, and extract them into your `data_path` folder. 
 
-3. Then, you need to pre-process all the datasets one-by-one into their corresponding few-shot versions by using following commands:
+3. Then, you need to pre-process all the datasets one-by-one into their corresponding few-shot versions by using the following commands:
     ```
     cd data
     python init_CUB_fewshot.py
     python init_mini-ImageNet.py
     python init_tiered-ImageNet_DeepEMD.py
     ```
+4. After that, the following folders will exist in your `data_path`:
+    - `CUB_fewshot_raw`: 100/50/50 classes for train/validation/test, using raw uncropped images as input
+    - `mini-ImageNet`: 64/16/20 classes for train/validation/test
+    - `tiered-ImageNet_DeepEMD`: 351/91/160 classes for train/validation/test, images have size of 224x224
+    
+    Under each folder, images are organized into `train`, `val`, and `test` folders. In addition, you can also find folders named `val_pre` and `test_pre`, which contain validation and testing images pre-resized to the size of 84x84 for the sake of speed.
+
+## Model Training and Testing
+
+
+
 
